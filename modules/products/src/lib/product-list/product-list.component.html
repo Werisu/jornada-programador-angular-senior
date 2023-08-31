@@ -1,2 +1,6 @@
-<p>product-list works!</p>
-<lib-ui></lib-ui>
+<input type="search" name="search" [formControl]="control" />
+<span *ngIf="loading()">carregando...</span>
+
+<ul>
+    <li *ngFor="let product of products$ | async">{{ product.name }}</li>
+</ul>
