@@ -7,7 +7,7 @@ import { Product } from '../models/product-search.model';
 @Component({
   selector: 'lib-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.scss'],
+  styleUrls: ['./product-list.component.scss', '../../../../../src/styles.scss'],
 })
 export class ProductListComponent implements OnInit {
   control = new FormControl('', {nonNullable: true});
