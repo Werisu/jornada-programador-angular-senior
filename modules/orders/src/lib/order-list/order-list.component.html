@@ -1,4 +1,5 @@
-<h1>Envie seu feedback</h1>
+<div class="container mx-auto mt-4">
+  <h1 class="text-2xl font-bold mb-4">Envie seu feedback</h1>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <div style="display: flex">
     <label>
@@ -8,9 +9,12 @@
   </div>
   <div>
     <label>Quer informar um comentário?</label>
-    <input formControlName="comment" />
+    <input type="text" formControlName="comment" />
   </div>
-  <button type="submit" [disabled]="form.invalid">Submit</button>
+  <button type="submit" [disabled]="form.invalid" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50">
+    Submit
+  </button>
 
-  <pre>{{ form.value | json }}</pre>
+  <pre class="mt-4 bg-gray-100 p-4 rounded">{{ form.value | json }}</pre>
 </form>
+</div>
